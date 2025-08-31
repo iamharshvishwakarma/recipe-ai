@@ -7,14 +7,14 @@ import Link from "next/link";
 import Logo from "@/components/icons/logo";
 
 const indianFoodImages = [
-  { src: "https://picsum.photos/400/300?random=1", alt: "Biryani", hint: "indian food" },
-  { src: "https://picsum.photos/400/300?random=2", alt: "Samosa", hint: "indian food" },
-  { src: "https://picsum.photos/400/300?random=3", alt: "Paneer Tikka", hint: "indian food" },
-  { src: "https://picsum.photos/400/300?random=4", alt: "Butter Chicken", hint: "indian food" },
-  { src: "https://picsum.photos/400/300?random=5", alt: "Dosa", hint: "indian food" },
-  { src: "https://picsum.photos/400/300?random=6", alt: "Naan", hint: "indian food" },
-  { src: "https://picsum.photos/400/300?random=7", alt: "Chole Bhature", hint: "indian food" },
-  { src: "https://picsum.photos/400/300?random=8", alt: "Jalebi", hint: "indian food" },
+  { src: "https://picsum.photos/seed/biryani/400/300", alt: "Biryani", hint: "indian food biryani" },
+  { src: "https://picsum.photos/seed/samosa/400/300", alt: "Samosa", hint: "indian food samosa" },
+  { src: "https://picsum.photos/seed/paneer/400/300", alt: "Paneer Tikka", hint: "indian food paneer" },
+  { src: "https://picsum.photos/seed/butterchicken/400/300", alt: "Butter Chicken", hint: "indian food chicken" },
+  { src: "https://picsum.photos/seed/dosa/400/300", alt: "Dosa", hint: "indian food dosa" },
+  { src: "https://picsum.photos/seed/naan/400/300", alt: "Naan", hint: "indian food naan" },
+  { src: "https://picsum.photos/seed/chole/400/300", alt: "Chole Bhature", hint: "indian food chole" },
+  { src: "https://picsum.photos/seed/jalebi/400/300", alt: "Jalebi", hint: "indian food jalebi" },
 ];
 
 export default function WelcomePage() {
