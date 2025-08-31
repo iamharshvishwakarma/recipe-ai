@@ -54,7 +54,7 @@ const formSchema = z.object({
 
 type FormValues = z.infer<typeof formSchema>;
 
-export default function GeneratorPage() {
+export default function GeneratorPage({}: {}) {
   const [recipe, setRecipe] = useState<Recipe | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [substitutionState, setSubstitutionState] = useState<{

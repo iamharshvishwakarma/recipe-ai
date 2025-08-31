@@ -17,7 +17,7 @@ const indianFoodImages = [
   { src: "https://picsum.photos/seed/jalebi/400/300", alt: "Jalebi", hint: "indian food jalebi" },
 ];
 
-export default function WelcomePage() {
+export default function WelcomePage({}: {}) {
   return (
     <div className="min-h-screen w-full bg-background text-foreground">
       <header className="p-4 sm:p-6 flex items-center justify-between">
