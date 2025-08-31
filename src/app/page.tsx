@@ -7,14 +7,14 @@ import Link from "next/link";
 import Logo from "@/components/icons/logo";
 
 const indianFoodImages = [
-  { src: "https://picsum.photos/seed/biryani/400/300", alt: "Biryani", hint: "indian food biryani" },
-  { src: "https://picsum.photos/seed/samosa/400/300", alt: "Samosa", hint: "indian food samosa" },
-  { src: "https://picsum.photos/seed/paneer/400/300", alt: "Paneer Tikka", hint: "indian food paneer" },
-  { src: "https://picsum.photos/seed/butterchicken/400/300", alt: "Butter Chicken", hint: "indian food chicken" },
-  { src: "https://picsum.photos/seed/dosa/400/300", alt: "Dosa", hint: "indian food dosa" },
-  { src: "https://picsum.photos/seed/naan/400/300", alt: "Naan", hint: "indian food naan" },
-  { src: "https://picsum.photos/seed/chole/400/300", alt: "Chole Bhature", hint: "indian food chole" },
-  { src: "https://picsum.photos/seed/jalebi/400/300", alt: "Jalebi", hint: "indian food jalebi" },
+  { src: "https://images.unsplash.com/photo-1672477179695-7276b0602fa9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxpbmRpYW4lMjBmb29kJTIwYmlyeWFuaXxlbnwwfHx8fDE3NTY2MzY2MjF8MA&ixlib=rb-4.1.0&q=80&w=1080", alt: "Biryani", hint: "indian food biryani" },
+  { src: "https://images.unsplash.com/photo-1613435392866-f81bf4cf1bbe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxpbmRpYW4lMjBmb29kJTIwc2Ftb3NhfGVufDB8fHx8MTc1NjYzNjYyMXww&ixlib=rb-4.1.0&q=80&w=1080", alt: "Samosa", hint: "indian food samosa" },
+  { src: "https://images.unsplash.com/photo-1736680056361-6a2f6e35fa50?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxpbmRpYW4lMjBmb29kJTIwcGFuZWVyfGVufDB8fHx8MTc1NjYzNjYyMXww&ixlib=rb-4.1.0&q=80&w=1080", alt: "Paneer Tikka", hint: "indian food paneer" },
+  { src: "https://images.unsplash.com/photo-1694579740719-0e601c5d2437?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjBmb29kJTIwY2hpY2tlbnxlbnwwfHx8fDE3NTY2MzY2MjF8MA&ixlib=rb-4.1.0&q=80&w=1080", alt: "Butter Chicken", hint: "indian food chicken" },
+  { src: "https://images.unsplash.com/photo-1743615467204-8fdaa85ff2db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxpbmRpYW4lMjBmb29kJTIwZG9zYXxlbnwwfHx8fDE3NTY2MzY2MjF8MA&ixlib=rb-4.1.0&q=80&w=1080", alt: "Dosa", hint: "indian food dosa" },
+  { src: "https://images.unsplash.com/photo-1690915475414-9aaecfd3ba74?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8aW5kaWFuJTIwZm9vZCUyMG5hYW58ZW58MHx8fHwxNzU2NjM2NjIxfDA&ixlib=rb-4.1.0&q=80&w=1080", alt: "Naan", hint: "indian food naan" },
+  { src: "https://images.unsplash.com/photo-1651462104786-98240fd73b02?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxpbmRpYW4lMjBmb29kJTIwY2hvbGV8ZW58MHx8fHwxNzU2NjM2NjIxfDA&ixlib=rb-4.1.0&q=80&w=1080", alt: "Chole Bhature", hint: "indian food chole" },
+  { src: "https://images.unsplash.com/photo-1680993032090-1ef7ea9b51e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxpbmRpYW4lMjBmb29kJTIwamFsZWJpfGVufDB8fHx8MTc1NjYzNjYyMXww&ixlib=rb-4.1.0&q=80&w=1080", alt: "Jalebi", hint: "indian food jalebi" },
 ];
 
 export default function WelcomePage({}: {}) {
