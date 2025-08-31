@@ -16,13 +16,9 @@ export const imageSearchTool = ai.defineTool(
     outputSchema: z.string().url().describe('The URL of the image found.'),
   },
   async (input) => {
-    // In a real application, you would use a library like 'axios' or 'node-fetch' 
-    // to call a search API (e.g., Google Custom Search, Unsplash API)
-    // and scrape the results. For this example, we'll return a placeholder.
     console.log(`Searching for image with query: ${input.query}`);
     const encodedQuery = encodeURIComponent(input.query);
-    // This is a placeholder that returns a random image from a service.
-    // A real implementation would provide a more relevant image.
-    return `https://picsum.photos/800/600?random=${Math.floor(Math.random() * 1000)}&q=${encodedQuery}`;
+    // This now uses Unsplash to provide a more relevant image.
+    return `https://source.unsplash.com/800x600/?${encodedQuery}`;
   }
 );
