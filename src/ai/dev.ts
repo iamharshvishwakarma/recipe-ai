@@ -3,3 +3,4 @@ config();
 
 import '@/ai/flows/generate-recipe-from-ingredients.ts';
 import '@/ai/flows/suggest-ingredient-substitutions.ts';
+import '@/ai/tools/image-search';

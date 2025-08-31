@@ -12,6 +12,7 @@
 
 import {ai} from '@/ai/genkit';
 import {z} from 'genkit';
+import { imageSearchTool } from '@/ai/tools/image-search';
 
 const GenerateRecipeInputSchema = z.object({
   ingredients: z
@@ -44,6 +45,7 @@ const GenerateRecipeOutputSchema = z.object({
     ),
   difficulty: z.enum(['Easy', 'Medium', 'Hard']).optional().describe('The difficulty level of the recipe.'),
   totalTime: z.string().optional().describe('The total cooking time.'),
+  imageUrl: z.string().url().optional().describe('A URL for an image of the recipe.'),
 });
 export type GenerateRecipeOutput = z.infer<typeof GenerateRecipeOutputSchema>;
 
@@ -57,6 +59,7 @@ const generateRecipePrompt = ai.definePrompt({
   name: 'generateRecipePrompt',
   input: {schema: GenerateRecipeInputSchema},
   output: {schema: GenerateRecipeOutputSchema},
+  tools: [imageSearchTool],
   prompt: `You are a recipe generation expert. Given a list of ingredients and dietary preferences, you will generate a detailed recipe.
 
   Ingredients: {{{ingredients}}}
@@ -67,10 +70,11 @@ const generateRecipePrompt = ai.definePrompt({
 
   Instructions:
   1. Generate a recipe title.
-  2. List the ingredients with quantities. Adjust quantities based on the number of servings.  If no serving size is provided, assume 4 servings.
-  3. Provide step-by-step cooking instructions.
-  4. If dietary preferences are provided, suggest ingredient substitutions to accommodate those preferences.
-  5. Consider difficulty and total time information, if provided.
+  2. After generating the title, use the imageSearch tool to find a suitable image for the recipe.
+  3. List the ingredients with quantities. Adjust quantities based on the number of servings.  If no serving size is provided, assume 4 servings.
+  4. Provide step-by-step cooking instructions.
+  5. If dietary preferences are provided, suggest ingredient substitutions to accommodate those preferences.
+  6. Consider difficulty and total time information, if provided.
 
   Follow output schema format EXACTLY.
 

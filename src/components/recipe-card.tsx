@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Utensils, Clock, ChefHat, Sparkles } from "lucide-react";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 interface RecipeCardProps {
   recipe: Recipe;
@@ -13,16 +14,28 @@ interface RecipeCardProps {
 }
 
 export function RecipeCard({ recipe, onSubstitutionClick }: RecipeCardProps) {
+  const [imageUrl, setImageUrl] = useState(`https://picsum.photos/800/600`);
+
+  useEffect(() => {
+    if (recipe.imageUrl) {
+      setImageUrl(recipe.imageUrl);
+    } else {
+      // Fallback for recipes without an image
+      setImageUrl(`https://picsum.photos/800/600?random=${Math.floor(Math.random() * 1000)}`);
+    }
+  }, [recipe.imageUrl]);
+
   return (
     <Card className="w-full h-full border-2 border-primary-foreground/50 shadow-lg shadow-primary-foreground/10 overflow-hidden">
       <CardHeader className="p-0">
         <div className="relative h-64 w-full">
             <Image 
-                src={`https://picsum.photos/800/600?random=${Math.floor(Math.random() * 1000)}`}
+                src={imageUrl}
                 alt={recipe.title}
                 fill
                 className="object-cover"
                 data-ai-hint="recipe food"
+                key={imageUrl} // Add key to force re-render on URL change
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
             <div className="absolute bottom-0 left-0 p-6">
